@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alifia Ardita — Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-text">AA</span>
+      <div class="logo-dot"></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#skills">Skill</a></li>
+      <li><a href="#projects">Proyek</a></li>
+      <li><a href="#experience">Pengalaman</a></li>
+      <li><a href="#org">Organisasi</a></li>
+      <li><a href="#contact" class="nav-cta-link">Kontak</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-blob blob1"></div>
+    <div class="hero-blob blob2"></div>
+    <div class="hero-blob blob3"></div>
+    <div class="hero-content">
+      <p class="hero-greeting reveal">
+        <span class="greeting-line"></span>
+        <span class="greeting-typed" id="typedGreeting"></span>
+      </p>
+      <h1 class="hero-name reveal delay-1">Alifia <em>Ardita</em></h1>
+      <div class="hero-tags reveal delay-2">
+        <span class="tag"><i class="fa-solid fa-pen-nib"></i> UI/UX Designer</span>
+        <span class="tag"><i class="fa-solid fa-code"></i> Web Developer</span>
+        <span class="tag"><i class="fa-solid fa-graduation-cap"></i> Sistem Informasi</span>
+      </div>
+      <p class="hero-sub reveal delay-3">Mahasiswa S1 Sistem Informasi · UPN "Veteran" Jawa Timur<br/>Merancang antarmuka yang indah & membangun web yang fungsional.</p>
+      <div class="hero-cta reveal delay-4">
+        <a href="#projects" class="btn-primary magnetic-btn">
+          <span>Lihat Proyek</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn-outline magnetic-btn">Hubungi Saya</a>
+      </div>
+      <div class="hero-scroll-stats reveal delay-4">
+        <div class="mini-stat"><span class="ms-num">4+</span><span class="ms-label">UI/UX Projects</span></div>
+        <div class="ms-divider"></div>
+        <div class="mini-stat"><span class="ms-num">3+</span><span class="ms-label">Web Projects</span></div>
+        <div class="ms-divider"></div>
+        <div class="mini-stat"><span class="ms-num">2</span><span class="ms-label">Organizations</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal delay-2">
+      <div class="avatar-glow"></div>
+      <div class="avatar-wrapper">
+
+        <!-- Ring yang muter -->
+        <div class="avatar-ring"></div>
+
+        <!-- Foto tetap diam -->
+        <div class="avatar-inner">
+            <img src="assets/profil.jpg" alt="Alifia Ardita" class="profile-photo">
+        </div>
+
+        </div>
+      <div class="floating-badge b1"><i class="devicon-figma-plain colored"></i> Figma</div>
+      <div class="floating-badge b2"><i class="devicon-laravel-original colored"></i> Laravel</div>
+      <div class="floating-badge b3"><i class="fa-solid fa-paintbrush"></i> UI/UX</div>
+      <div class="floating-badge b4"><i class="devicon-php-plain colored"></i> PHP</div>
+      <div class="orbit-ring or1"></div>
+      <div class="orbit-ring or2"></div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">01 · Tentang</div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <h2>Siapa saya?</h2>
+        <p>Mahasiswa S1 Sistem Informasi di <strong>UPN Veteran Jawa Timur</strong> dengan latar belakang Rekayasa Perangkat Lunak dari SMK Negeri 1 Surabaya.</p>
+        <p>Saya memiliki dua passion utama: <strong>UI/UX Design</strong> — merancang antarmuka yang intuitif dan estetis menggunakan Figma, serta <strong>Web Development</strong> — membangun aplikasi web fungsional dengan PHP, Laravel, dan teknologi front-end modern.</p>
+        <p>Saya percaya desain yang baik bukan hanya tentang tampilan, tapi juga tentang bagaimana pengguna merasakan produk tersebut.</p>
+        <div class="about-info-row">
+          <div class="info-item">
+            <span class="info-icon"><i class="fa-solid fa-location-dot"></i></span>
+            <span>Sidoarjo, Jawa Timur</span>
+          </div>
+          <div class="info-item">
+            <span class="info-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+            <span>S1 Sistem Informasi, 2024–Sekarang</span>
+          </div>
+          <div class="info-item">
+            <span class="info-icon"><i class="fa-solid fa-briefcase"></i></span>
+            <span>Open to Opportunities</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-photo reveal delay-1">
+
+   <!-- FOTO PROFILE -->
+<div class="about-photo reveal delay-1">
+
+    <!-- FRAME ANIMASI -->
+    <div class="photo-frame">
+
+        <!-- FOTO -->
+        <img src="assets/foto.jpg" alt="Profile">
+
+    </div>
+
+</div>
+
+</div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label">02 · Kemampuan</div>
+    <h2 class="section-title reveal">Skill & Teknologi</h2>
+    <div class="skills-wrapper">
+      <div class="skills-col reveal">
+        <h3>Hard Skills</h3>
+        <div class="skill-list">
+          <div class="skill-item" data-level="75">
+            <div class="skill-info"><span>PHP</span><span class="skill-pct">75%</span></div>
+            <div class="skill-note-text">Web Development</div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
+          </div>
+          <div class="skill-item" data-level="80">
+            <div class="skill-info"><span>HTML · CSS · JavaScript</span><span class="skill-pct">80%</span></div>
+            <div class="skill-note-text">Front-End Dasar</div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+          </div>
+          <div class="skill-item" data-level="70">
+            <div class="skill-info"><span>Laravel</span><span class="skill-pct">70%</span></div>
+            <div class="skill-note-text">MVC Web Development</div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
+          </div>
+          <div class="skill-item" data-level="75">
+            <div class="skill-info"><span>Tailwind CSS · Bootstrap</span><span class="skill-pct">75%</span></div>
+            <div class="skill-note-text">Responsive UI</div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
+          </div>
+          <div class="skill-item" data-level="70">
+            <div class="skill-info"><span>MySQL</span><span class="skill-pct">70%</span></div>
+            <div class="skill-note-text">Database Design & CRUD</div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
+          </div>
+          <div class="skill-item" data-level="85">
+            <div class="skill-info"><span>Figma</span><span class="skill-pct">85%</span></div>
+            <div class="skill-note-text">UI Design & Prototyping</div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+          </div>
+          <div class="skill-item" data-level="80">
+            <div class="skill-info"><span>UI/UX Design</span><span class="skill-pct">80%</span></div>
+            <div class="skill-note-text">Wireframe · Prototype · User Flow</div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+          </div>
+          <div class="skill-item" data-level="60">
+            <div class="skill-info"><span>Git & Version Control</span><span class="skill-pct">60%</span></div>
+            <div class="skill-note-text">Kolaborasi Project</div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:60%"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="skills-col reveal delay-1">
+        <h3>Soft Skills</h3>
+        <div class="softskill-grid">
+          <div class="softskill-card"><span class="ss-icon"><i class="fa-solid fa-users"></i></span><span>Komunikasi & Teamwork</span></div>
+          <div class="softskill-card"><span class="ss-icon"><i class="fa-solid fa-clock"></i></span><span>Manajemen Waktu</span></div>
+          <div class="softskill-card"><span class="ss-icon"><i class="fa-solid fa-arrows-rotate"></i></span><span>Adaptabilitas</span></div>
+          <div class="softskill-card"><span class="ss-icon"><i class="fa-solid fa-puzzle-piece"></i></span><span>Problem Solving</span></div>
+          <div class="softskill-card"><span class="ss-icon"><i class="fa-solid fa-magnifying-glass"></i></span><span>Teliti & Analitis</span></div>
+          <div class="softskill-card"><span class="ss-icon"><i class="fa-solid fa-lightbulb"></i></span><span>Kreatif & Growth Mindset</span></div>
+        </div>
+
+        <h3 style="margin-top:2.5rem;">Tools & Platform</h3>
+        <div class="tools-row">
+        <div class="tool-chip"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
+        <div class="tool-chip"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
+        <div class="tool-chip"><i class="devicon-github-original"></i><span>GitHub</span></div>
+
+        <div class="tool-chip"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
+        <div class="tool-chip"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
+        <div class="tool-chip"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+        <div class="tool-chip"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+        <div class="tool-chip"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+        <div class="tool-chip"><i class="fa-solid fa-server"></i><span>XAMPP</span></div>
+
+        <div class="tool-chip"><i class="devicon-laravel-original colored"></i><span>Laravel</span></div>
+        <div class="tool-chip"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+        <div class="tool-chip"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+        <div class="tool-chip"><i class="devicon-tailwindcss-original colored"></i><span>Tailwind</span></div>
+        </div>  
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">03 · Proyek</div>
+    <h2 class="section-title reveal">Proyek Pilihan</h2>
+    <div class="project-tabs reveal">
+      <button class="tab-btn active" data-tab="all">Semua</button>
+      <button class="tab-btn" data-tab="uiux">UI/UX Design</button>
+      <button class="tab-btn" data-tab="web">Web Dev</button>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal" data-category="uiux">
+        <div class="project-header">
+          <div class="project-year">2026</div>
+          <div class="project-type uiux-badge">UI/UX</div>
+        </div>
+        <h3>TemuAksi</h3>
+        <p>Platform penghubung perusahaan dan event organizer. Merancang alur sistem, wireframe, dan prototype aplikasi web menggunakan Figma.</p>
+        <div class="project-tags"><span>Figma</span><span>Wireframe</span><span>Prototype</span></div>
+        <a href="https://www.figma.com/design/kTOxgLR3jlzRj1HWcfeczz/24082010101-ALIFIA-ARDITA-s-team-library?node-id=0-1&t=ziMSu5yMfkEfk6rS-1" class="project-link">Lihat desain <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="project-card reveal delay-1" data-category="web">
+        <div class="project-header">
+          <div class="project-year">2026</div>
+          <div class="project-type web-badge">Web Dev</div>
+        </div>
+        <h3>Website TemuAksi</h3>
+        <p>Aplikasi web penghubung antara perusahaan dan event organizer. Fitur pencarian mitra, pengajuan kerja sama, dan pengelolaan kebutuhan acara.</p>
+        <div class="project-tags"><span>PHP</span><span>Laravel</span><span>Tailwind CSS</span><span>JavaScript</span></div>
+        <a href="https://github.com/Alifiaardita/TemuAksi-Laravel/tree/master" class="project-link">Lihat Proyek <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="project-card reveal delay-2" data-category="uiux">
+        <div class="project-header">
+          <div class="project-year">2025</div>
+          <div class="project-type uiux-badge">UI/UX</div>
+        </div>
+        <h3>SIRAGA</h3>
+        <p>Sistem Persuratan Warga Desa Kedungturi. Merancang alur sistem menggunakan StarUML serta membuat wireframe dan prototype di Figma.</p>
+        <div class="project-tags"><span>Figma</span><span>StarUML</span><span>Wireframe</span></div>
+        <a href="https://www.figma.com/design/0ChBRzAoNEBmfjf8lxcPuw/SIRAGA?node-id=35-23&t=Bzepi1sORCOOv7ZM-1" class="project-link">Lihat desain <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="project-card reveal" data-category="uiux">
+        <div class="project-header">
+          <div class="project-year">2025</div>
+          <div class="project-type uiux-badge">UI/UX</div>
+        </div>
+        <h3>CyMoon App</h3>
+        <p>Aplikasi pelacak siklus menstruasi. Merancang alur sistem dan desain antarmuka yang ramah pengguna bersama tim menggunakan Figma.</p>
+        <div class="project-tags"><span>Figma</span><span>User Flow</span><span>Prototype</span></div>
+        <a href="https://www.figma.com/design/c2ZOhwANoK5R3nG5motfiJ/CyMoon?node-id=0-1&t=MlksUQgwTDf0ToXD-1" class="project-link">Lihat desain <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="project-card reveal delay-1" data-category="uiux">
+        <div class="project-header">
+          <div class="project-year">2025</div>
+          <div class="project-type uiux-badge">UI/UX</div>
+        </div>
+        <h3>Naize</h3>
+        <p>Aplikasi Penyewaan Tempat. Merancang alur sistem dan desain antarmuka aplikasi bersama tim menggunakan Figma.</p>
+        <div class="project-tags"><span>Figma</span><span>User Flow</span><span>Prototype</span></div>
+        <a href="https://www.figma.com/design/uPaFyCFd478NcEzGhRNe8m/Naize?node-id=0-1&t=7vVSnKBAIY6PNPN7-1" class="project-link">Lihat desain <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="project-card reveal delay-1" data-category="uiux">
+        <div class="project-header">
+          <div class="project-year">2025</div>
+          <div class="project-type uiux-badge">UI/UX</div>
+        </div>
+      <h3>MyGoals</h3>
+        <p>Aplikasi Tabungan (MyGoals). Merancang alur sistem dan desain antarmuka aplikasi bersama tim menggunakan Figma.</p>
+        <div class="project-tags"><span>Figma</span><span>User Flow</span><span>Prototype</span></div>
+        <a href="https://www.figma.com/design/QROWI99Dv4dV32b7fdRyDu/prototype?node-id=0-1&t=DGs9T3LuhEqSgVSH-1" class="project-link">Lihat desain <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      
+      <div class="project-card reveal delay-2" data-category="web">
+        <div class="project-header">
+          <div class="project-year">2024</div>
+          <div class="project-type web-badge">Web Dev</div>
+        </div>
+        <h3>E-GuestBook</h3>
+        <p>Website buku tamu digital untuk memudahkan pencatatan data tamu secara online dengan tampilan responsif dan pengelolaan data yang efisien.</p>
+        <div class="project-tags"><span>HTML</span><span>CSS</span><span>PHP</span><span>Laravel</span></div>
+        <a href="https://github.com/Alifiaardita/e-guestbook" class="project-link">Lihat Proyek <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="https://youtu.be/GuRIGHXsr8Q?si=QzC0NR6ACkSx0lO4" class="project-link">Video demo aplikasi <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="project-card reveal" data-category="web">
+        <div class="project-header">
+          <div class="project-year">2023</div>
+          <div class="project-type web-badge">Web Dev</div>
+        </div>
+        <h3>Website Restoran</h3>
+        <p>Website restoran responsif dengan tampilan user-friendly untuk menampilkan menu, informasi layanan, dan profil restoran.</p>
+        <div class="project-tags"><span>HTML</span><span>CSS</span><span>Bootstrap</span></div>
+        <a href="https://github.com/Alifiaardita/foodweb" class="project-link">Lihat Proyek <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label">04 · Pengalaman Kerja</div>
+    <h2 class="section-title reveal">Praktik Kerja Lapangan</h2>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2023 – 2024</div>
+        <div class="timeline-content">
+          <h3>Ketua Tim PKL</h3>
+          <div class="timeline-company">Praktik Kerja Lapangan</div>
+          <ul>
+            <li>Mengkoordinasikan dan mengawasi jalannya kegiatan magang serta memastikan seluruh tugas tim berjalan sesuai target.</li>
+            <li>Memimpin proyek pengembangan website berbasis PHP mulai dari perencanaan hingga penyelesaian.</li>
+            <li>Merancang sistem, mengelola database, serta melakukan evaluasi dan pelaporan berkala kepada pembimbing.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+<section id="certificates">
+  <div class="section-label">05 · Sertifikat</div>
+  <h2 class="section-title reveal">Sertifikasi & Kompetensi</h2>
+
+  <div class="certificate-grid">
+
+  <div class="certificate-card reveal"
+       onclick="openCertificate('assets/pdf/sertifikat-magang.pdf')">
+    <div class="certificate-icon">
+      <i class="fa-solid fa-award"></i>
+    </div>
+
+    <div class="certificate-content">
+      <div class="certificate-year">2022-2023</div>
+      <h3>Sertifikat Magang</h3>
+
+      <p>
+        Sertifikat penyelesaian kegiatan Praktik Kerja Lapangan (PKL)
+        sebagai bentuk pengalaman kerja dan pengembangan keterampilan
+        di bidang teknologi informasi.
+      </p>
+
+      <div class="certificate-tags">
+        <span>Magang</span>
+        <span>PKL</span>
+        <span>Pengalaman Kerja</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="certificate-card reveal delay-1"
+       onclick="openCertificate('assets/pdf/sertifikat-panigra.pdf')">
+    <div class="certificate-icon">
+      <i class="fa-solid fa-code"></i>
+    </div>
+
+    <div class="certificate-content">
+      <div class="certificate-year">2023</div>
+      <h3>Kompetensi Pemrograman Dasar</h3>
+      <div class="certificate-org">PANIGRA</div>
+
+      <p>
+        Sertifikat kompetensi dalam bidang pemrograman dasar meliputi
+        logika pemrograman, algoritma, serta dasar pengembangan aplikasi.
+      </p>
+
+      <div class="certificate-tags">
+        <span>Programming</span>
+        <span>Algoritma</span>
+        <span>Dasar Pemrograman</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="certificate-card reveal delay-2"
+       onclick="openCertificate('assets/pdf/sertifikat-bnsp.pdf')">
+    <div class="certificate-icon">
+      <i class="fa-solid fa-medal"></i>
+    </div>
+
+    <div class="certificate-content">
+      <div class="certificate-year">2024</div>
+      <h3>Kompetensi Pemrogram Pemula</h3>
+      <div class="certificate-org">BNSP</div>
+
+      <p>
+        Sertifikasi kompetensi pemrogram pemula yang mencakup kemampuan
+        dasar dalam pengembangan perangkat lunak dan implementasi program.
+      </p>
+
+      <div class="certificate-tags">
+        <span>BNSP</span>
+        <span>Programmer</span>
+        <span>Software Development</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- MODAL PDF -->
+<div class="certificate-modal" id="certificateModal">
+  <div class="certificate-modal-content">
+
+    <button class="close-modal" onclick="closeCertificate()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <iframe id="certificateFrame" src=""></iframe>
+
+  </div>
+</div>
+</section>
+
+  <!-- ORGANISATION -->
+  <section id="org">
+    <div class="section-label">06 · Organisasi</div>
+    <h2 class="section-title reveal">Pengalaman Organisasi</h2>
+    <div class="org-grid">
+
+      <div class="org-card reveal">
+        <div class="org-card-top">
+          <div class="org-photo-wrap">
+            <img src="assets/hima.jpg" alt="HMSI Foto" class="org-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+            <div class="org-photo-fallback" style="display:none">
+              <i class="fa-solid fa-image"></i>
+            </div>
+          </div>
+          <div class="org-header-info">
+            <div class="org-year">2026 – 2027</div>
+            <h3>Himpunan Mahasiswa Sistem Informasi</h3>
+            <div class="org-role-badge">
+              <i class="fa-solid fa-crown"></i>
+              Wakil Kepala Dept. Kewirausahaan
+            </div>
+            <div class="org-cabinet">Kabinet Sagaranava</div>
+          </div>
+        </div>
+        <ul>
+          <li>Mendampingi Kepala Departemen dalam merencanakan, mengawasi, dan mengevaluasi program kerja.</li>
+          <li>Menyusun konsep dan strategi program kerja untuk pengembangan kegiatan kewirausahaan.</li>
+          <li>Memimpin pelaksanaan program kerja agar berjalan efektif dan sesuai target.</li>
+        </ul>
+      </div>
+
+      <div class="org-card reveal delay-1">
+        <div class="org-card-top">
+          <div class="org-photo-wrap">
+            <img src="assets/iscom.jpg" alt="ISCOM Foto" class="org-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+            <div class="org-photo-fallback" style="display:none">
+              <i class="fa-solid fa-image"></i>
+            </div>
+          </div>
+          <div class="org-header-info">
+            <div class="org-year">2026 – 2027</div>
+            <h3>Komunitas ISCOM</h3>
+            <div class="org-role-badge">
+              <i class="fa-solid fa-chart-line"></i>
+              Business Development
+            </div>
+            <div class="org-cabinet">Information System Comunity</div>
+          </div>
+        </div>
+        <ul>
+          <li>Menyusun strategi pengembangan organisasi melalui kerja sama dan peluang kemitraan eksternal.</li>
+          <li>Membangun serta menjaga hubungan profesional dengan sponsor, mitra, dan relasi organisasi.</li>
+          <li>Mengidentifikasi peluang bisnis dan mendukung pelaksanaan program kerja.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">07 · Kontak</div>
+    <div class="contact-wrapper reveal">
+      <div class="contact-headline">
+        <h2>Mari Berkolaborasi!</h2>
+        <div class="contact-sparkles">
+          <span class="sparkle s1">✦</span>
+          <span class="sparkle s2">✦</span>
+          <span class="sparkle s3">✦</span>
+        </div>
+      </div>
+      <p>Tertarik bekerja sama atau punya proyek menarik? Jangan ragu untuk menghubungi saya.</p>
+      <div class="contact-links">
+        <a href="mailto:alifiaardita07@gmail.com" class="contact-item">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="contact-text"><h4>Email</h4><span>alifiaardita07@gmail.com</span></div>
+          <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/alifia-ardita" target="_blank" class="contact-item">
+          <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+          <div class="contact-text"><h4>LinkedIn</h4><span>linkedin.com/in/alifia-ardita</span></div>
+          <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+        </a>
+        <a href="https://instagram.com/alifiaadt_" target="_blank" class="contact-item">
+          <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+          <div class="contact-text"><h4>Instagram</h4><span>@alifiaadt_</span></div>
+          <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+        </a>
+        <a href="tel:+6288102742256" class="contact-item">
+          <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="contact-text"><h4>WhatsApp</h4><span>+62 881-0274-22565</span></div>
+          <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+        </a>
+      </div>
+      <a href="mailto:alifiaardita07@gmail.com" class="btn-primary magnetic-btn" style="margin-top:2rem;display:inline-flex;align-items:center;gap:.5rem;">
+        <span>Kirim Pesan</span>
+        <i class="fa-solid fa-paper-plane"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">AA</span>
+      <span>© 2026 Alifia Ardita</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/alifia-ardita" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Alifiaardita" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
