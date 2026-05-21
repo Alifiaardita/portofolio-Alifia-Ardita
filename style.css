@@ -1495,6 +1495,9 @@ footer {
     text-align: center;
     min-height: auto;
   }
+   .scroll-hint{
+    display: none;
+  }
   .hero-tags { justify-content: center; }
   .hero-cta { justify-content: center; }
   .hero-scroll-stats { margin: 0 auto; }
