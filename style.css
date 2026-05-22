@@ -219,104 +219,319 @@ section {
   transition: all 0.3s;
 }
 
-/* FOTO AREA */
-.about-photo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* ── ABOUT PHOTO (REVISED) ── */
+
+
+.about-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* FRAME */
-.photo-frame{
-    position: relative;
-    width: 320px;
-    height: 420px;
-    padding: 8px;
-    border-radius: 30px;
-    overflow: hidden;
-    animation: floating 4s ease-in-out infinite;
+.photo-scene {
+  position: relative;
+  width: 320px;
+  height: 420px;
 }
 
-/* BORDER ANIMASI */
-.photo-frame::before{
-    content: "";
-    position: absolute;
-    inset: -120px;
-    background: conic-gradient(
-        #E07030,
-        #FFE0C0,
-        #FF8C42,
-        #4A2C0A
-    );
-    animation: rotateBorder 6s linear infinite;
+/* Frame utama */
+.photo-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  animation: floating 4s ease-in-out infinite;
+  z-index: 2;
 }
 
-/* BACKGROUND DALAM */
-.photo-frame::after{
-    content: "";
-    position: absolute;
-    inset: 6px;
-    background: #0f172a;
-    border-radius: 24px;
-    z-index: 1;
+.photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: -120px;
+  background: conic-gradient(#E07030, #FFE0C0, #FF8C42, #4A2C0A);
+  animation: rotateBorder 6s linear infinite;
+  z-index: 0;
 }
 
-/* FOTO */
-.photo-frame img{
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 24px;
-    transition: 0.4s ease;
-    filter: brightness(0.95);
+.photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  background: var(--cream);
+  border-radius: 24px;
+  z-index: 1;
 }
 
-/* HOVER */
-.photo-frame:hover img{
-    transform: scale(1.03);
-    filter: brightness(1);
+.photo-frame img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  filter: brightness(0.97);
+  transition: 0.4s ease;
 }
 
-/* GLOW */
-.photo-frame{
-    box-shadow:
-    0 0 25px rgba(255,140,66,0.14),
-    0 0 50px rgba(255,200,140,0.28);
+.photo-frame:hover img { transform: scale(1.03); filter: brightness(1); }
+
+/* Ring dekorasi di belakang */
+.deco-ring {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border: 2px dashed rgba(255,140,66,0.25);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  animation: orbitSpin 20s linear infinite;
 }
 
-/* ANIMATION */
-@keyframes rotateBorder{
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
+/* Dots dekorasi */
+.deco-dot {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+.d1 { width: 14px; height: 14px; background: var(--orange); top: 10px; right: -10px; opacity: 0.7; animation: dotBounce 2s ease-in-out infinite; }
+.d2 { width: 9px; height: 9px; background: var(--peach); bottom: 60px; right: -20px; opacity: 0.6; animation: dotBounce 2.5s ease-in-out infinite 0.5s; }
+.d3 { width: 12px; height: 12px; background: var(--brown); bottom: 20px; left: -15px; opacity: 0.4; animation: dotBounce 3s ease-in-out infinite 1s; }
+
+@keyframes dotBounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
-@keyframes floating{
-    0%{
-        transform: translateY(0px);
-    }
-    50%{
-        transform: translateY(-10px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
+/* Floating cards */
+.photo-float-card {
+  position: absolute;
+  background: white;
+  border-radius: 50px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--brown);
+  box-shadow: 0 8px 24px rgba(74,44,10,0.12);
+  border: 1px solid var(--peach-light);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  z-index: 4;
+  white-space: nowrap;
+}
+.photo-float-card i { color: var(--orange); }
+.fc1 { top: 30px; right: -30px; animation: floatBadge 3s ease-in-out infinite; }
+.fc2 { bottom: 60px; left: -30px; animation: floatBadge 3s ease-in-out infinite 1.2s; }
+
+/* Experience badge */
+.photo-exp-badge {
+  position: absolute;
+  bottom: -10px;
+  right: -20px;
+  background: var(--orange);
+  color: white;
+  border-radius: 20px;
+  padding: 0.8rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 8px 24px rgba(255,140,66,0.35);
+  z-index: 4;
+  animation: floatBadge 3s ease-in-out infinite 0.5s;
+}
+.exp-num {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.exp-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.4;
+  opacity: 0.9;
 }
 
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .photo-scene { margin: 0 auto; }
+}
+
+@media (max-width: 600px) {
+  .photo-scene { width: 260px; height: 340px; }
+  .fc1 { right: -10px; }
+  .fc2 { left: -10px; }
+  .photo-exp-badge { right: -5px; }
+}
 /* RESPONSIVE */
-@media(max-width:768px){
+@media (max-width: 768px) {
+  .photo-frame {
+    width: 250px;
+    height: 330px;
+    margin-top: 30px;
+  }
+}
 
-    .photo-frame{
-        width: 250px;
-        height: 330px;
-        margin-top: 30px;
-    }
+/* ── EDUCATION ── */
+.edu-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
+.edu-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  border: 1px solid var(--peach-light);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.8rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--orange), var(--peach));
+  border-radius: 0 2px 2px 0;
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.edu-logo-wrap {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 18px;
+  background: var(--peach-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(255,140,66,0.2);
+  box-shadow: 0 4px 14px rgba(74,44,10,0.08);
+}
+
+.edu-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+}
+
+.edu-logo-fallback {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1.8rem;
+  color: var(--orange);
+}
+
+.edu-content {
+  flex: 1;
+}
+
+.edu-year {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--orange);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.edu-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brown);
+  margin-bottom: 0.2rem;
+}
+
+.edu-degree {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255,140,66,0.1);
+  color: var(--orange-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.25rem 0.8rem;
+  border-radius: 50px;
+  margin-bottom: 0.8rem;
+}
+
+.edu-content p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.edu-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--orange);
+  border: 1.5px solid rgba(255,140,66,0.3);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  transition: all 0.25s;
+}
+
+.edu-link:hover {
+  background: var(--orange);
+  color: white;
+  border-color: var(--orange);
+  gap: 0.7rem;
+}
+
+.edu-badge {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(34,197,94,0.12);
+  color: #16a34a;
+  border: 1px solid rgba(34,197,94,0.25);
+}
+
+.edu-badge.lulus {
+  background: rgba(255,140,66,0.12);
+  color: var(--orange-dark);
+  border-color: rgba(255,140,66,0.25);
+}
+
+@media (max-width: 600px) {
+  .edu-card {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .edu-logo-wrap {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 /* ── HERO (REVISED) ── */
@@ -1082,6 +1297,26 @@ section {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ripple shimmer saat hover */
+.certificate-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,140,66,0.07), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+
+.certificate-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(255, 98, 0, 0.4);
 }
 
 .certificate-card:hover {
@@ -1157,9 +1392,7 @@ section {
 
 /* ── CERTIFICATE POPUP ── */
 
-.certificate-card {
-  cursor: pointer;
-}
+
 
 .certificate-modal {
   position: fixed;
