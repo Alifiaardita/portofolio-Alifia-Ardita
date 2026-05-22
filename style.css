@@ -1526,17 +1526,100 @@ footer {
 }
 @media (max-width: 600px) {
 
-  .org-card-top { flex-direction: column; }
-  .org-photo-wrap { width: 100%; height: 160px; }
-  .hero-visual { margin-bottom: 2rem; }
+  .org-card-top {
+    flex-direction: column;
+  }
 
+  .org-photo-wrap {
+    width: 100%;
+    height: 160px;
+  }
+
+  .hero-visual {
+    margin-bottom: 2rem;
+  }
+
+  /* AVATAR */
   .avatar-wrapper {
     width: 200px;
     height: 200px;
   }
 
-  /* TAMBAHAN INI */
-  .project-tabs{
+  .avatar-ring {
+    inset: 0;
+  }
+
+  .avatar-ring::before {
+    inset: 5px;
+    border-radius: 50%;
+  }
+
+  .avatar-inner {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 2;
+    background: var(--cream);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    display: block;
+  }
+
+  /* ORBIT */
+  .or1 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .or2 {
+    width: 310px;
+    height: 310px;
+  }
+
+  /* FLOATING BADGES */
+  .floating-badge {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  .b1 {
+    top: 0;
+    right: -5px;
+  }
+
+  .b2 {
+    bottom: 5px;
+    left: -10px;
+  }
+
+  .b3 {
+    right: -10px;
+  }
+
+  .b4 {
+    left: -10px;
+  }
+
+  /* STATS */
+  .hero-scroll-stats {
+    gap: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  /* PROJECT TAB MOBILE */
+  .project-tabs {
     width: 100%;
     border-radius: 20px;
     padding: 0.5rem;
@@ -1546,25 +1629,11 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .tab-btn{
+  .tab-btn {
     width: 100%;
     text-align: center;
     padding: 0.8rem 1rem;
     font-size: 0.85rem;
   }
 
-}
-
-.avatar-inner {
-  width: 175px;
-  height: 175px;
-}
-  .or1 { width: 250px; height: 250px; }
-  .or2 { width: 310px; height: 310px; }
-  .floating-badge { font-size: 0.65rem; padding: 0.3rem 0.65rem; }
-  .b1 { top: 0; right: -5px; }
-  .b2 { bottom: 5px; left: -10px; }
-  .b3 { right: -10px; }
-  .b4 { left: -10px; }
-  .hero-scroll-stats { gap: 1rem; padding: 0.8rem 1.2rem; }
 }
