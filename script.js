@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ─── TYPED GREETING ─── */
-  const words = ['seorang Designer', 'seorang Developer', 'seorang Kreator'];
+  const words = ['Seorang Designer', 'Seorang Developer', 'Seorang Kreator'];
   let wIndex=0, cIndex=0, isDeleting=false;
   const typedEl = document.getElementById('typedGreeting');
   if (typedEl) {

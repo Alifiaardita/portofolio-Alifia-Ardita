@@ -377,6 +377,19 @@ section {
 }
 
 /* ── EDUCATION ── */
+.org-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.org-card {
+  cursor: pointer;
+}
+
+.org-card:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+
 .edu-grid {
   display: flex;
   flex-direction: column;
@@ -1464,6 +1477,36 @@ section {
 }
 
 /* ── ORGANISATIONS (REVISED WITH PHOTO) ── */
+
+/* LINK WRAPPER */
+.org-card-link{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* HOVER EFFECT */
+.org-card-link .org-card{
+  transition: all .35s ease;
+  cursor: pointer;
+}
+
+.org-card-link:hover .org-card{
+  transform: translateY(-8px);
+}
+
+/* INSTAGRAM ICON */
+.org-ig-icon{
+  font-size: 1rem;
+  margin-left: .5rem;
+  color: #ff7b54;
+  transition: .3s;
+}
+
+.org-card-link:hover .org-ig-icon{
+  transform: scale(1.15);
+}
+
 #org { background: none; }
 .org-grid {
   display: grid;
